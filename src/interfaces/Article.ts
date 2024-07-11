@@ -6,4 +6,5 @@ export interface Article {
     news_site:    string;
     summary:      string;
     published_at: Date;
+    updated_at:   Date;
 }

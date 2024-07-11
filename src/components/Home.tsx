@@ -33,7 +33,7 @@ const Home = () => {
             <h1>Articles</h1>
             <Row>
             {articles.map(article  =>  (
-            <Col xs={12} md={3}>
+            <Col xs={12} className="py-2 gap-3" style={{width: "50%"}}>
             <SingleArticle key={article.id} article={article}/>
             </Col>))}
             </Row>

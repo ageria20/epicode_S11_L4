@@ -1,5 +1,6 @@
 import { Button, Card, Container} from "react-bootstrap"
 import { Article } from "../interfaces/Article"
+import { useNavigate } from "react-router-dom"
 
 
  interface SingleArticleProps {
@@ -9,6 +10,7 @@ import { Article } from "../interfaces/Article"
 const SingleArticle = ({ article }:  SingleArticleProps) => {
     
 
+    const navigate = useNavigate()
     
     return (
         <Container>
@@ -19,7 +21,9 @@ const SingleArticle = ({ article }:  SingleArticleProps) => {
         <Card.Text>
           {article.summary}
         </Card.Text>
-        <Button variant="primary">Details</Button>
+        <Button variant="primary" onClick={() => {
+            navigate("/details/" + article.id)
+        }}>Details</Button>
       </Card.Body>
     </Card>
         </Container>
