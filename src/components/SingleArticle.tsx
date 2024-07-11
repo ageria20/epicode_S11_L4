@@ -2,11 +2,11 @@ import { Button, Card, Container} from "react-bootstrap"
 import { Article } from "../interfaces/Article"
 
 
- interface SingleArticleState {
+ interface SingleArticleProps {
     article: Article
  }
 
-const SingleArticle = ({ article }:  SingleArticleState) => {
+const SingleArticle = ({ article }:  SingleArticleProps) => {
     
 
     
@@ -19,7 +19,7 @@ const SingleArticle = ({ article }:  SingleArticleState) => {
         <Card.Text>
           {article.summary}
         </Card.Text>
-        <Button variant="primary">Get Details</Button>
+        <Button variant="primary">Details</Button>
       </Card.Body>
     </Card>
         </Container>

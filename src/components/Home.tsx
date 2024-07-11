@@ -32,11 +32,10 @@ const Home = () => {
         <Container className="mt-5">
             <h1>Articles</h1>
             <Row>
-            {articles.map(article  => {
-                
+            {articles.map(article  =>  (
             <Col xs={12} md={3}>
-            <SingleArticle key={article.id} article={articles}/>
-            </Col>})}
+            <SingleArticle key={article.id} article={article}/>
+            </Col>))}
             </Row>
         </Container>)
     )
